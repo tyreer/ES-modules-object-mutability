@@ -1,6 +1,8 @@
 import { foo, checkOriginalFoo } from './mutability'
 
-foo.bar = 'newBarValue'
+const newFooReference = foo;
+
+newFooReference.bar = 'newBarValue'
 
 const mutatedFooAssertion = {
   bar: 'newBarValue'
